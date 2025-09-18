@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LaslesVPN</title>
-    <link rel="icon" href="./images/logo.png" type="image/x-icon" />
+    <title>AureaAPP</title>
+    <link rel="icon" href="./images/logo.webp" type="image/x-icon" />
     <link rel="stylesheet" href="output.css" />
 
     <!-- AOS CSS -->
@@ -24,10 +24,50 @@
       <nav
         class="max-w-[1440px] container mx-auto px-4 py-4 flex items-center justify-between"
       >
+        <!-- Hamburger -->
+        <button
+          id="hamburger"
+          class="md:hidden flex flex-col justify-between w-8 h-6 focus:outline-none z-50 relative"
+        >
+          <span class="block h-1 w-full bg-gray-600 rounded"></span>
+          <span class="block h-1 w-full bg-gray-600 rounded"></span>
+          <span class="block h-1 w-full bg-gray-600 rounded"></span>
+        </button>
+
+        <!-- Side Panel Menu -->
+        <div
+          id="menu"
+          class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform -translate-x-full transition-transform duration-300 z-40 flex flex-col p-20 space-y-6 md:hidden"
+        >
+          <a href="#home" class="text-gray-800 hover:text-primary font-medium"
+            >About</a
+          >
+          <a
+            href="#features"
+            class="text-gray-800 hover:text-primary font-medium"
+            >Features</a
+          >
+          <a
+            href="#pricing"
+            class="text-gray-800 hover:text-primary font-medium"
+            >Pricing</a
+          >
+          <a
+            href="#testimonials"
+            class="text-gray-800 hover:text-primary font-medium"
+            >Testimonials</a
+          >
+          <a
+            href="#subscribe"
+            class="text-gray-800 hover:text-primary font-medium"
+            >Help</a
+          >
+        </div>
+
         <!-- Logo -->
-        <div class="text-2xl font-bold flex items-center gap-2">
-          <img src="./images/logo.png" alt="LaslesVPN" class="h-8" />
-          <span class="text-red-500">LaslesVPN</span>
+        <div class="hidden text-2xl font-bold md:flex items-center gap-2">
+          <img src="./images/logo.webp" alt="LaslesVPN" class="h-12" />
+          <span class="!font-700">Aurea</span><span class="!font-300"></span>
         </div>
 
         <!-- Menu Items -->
@@ -51,7 +91,7 @@
         <div class="space-x-4">
           <button class="text-gray-600 hover:text-gray-900">Sign In</button>
           <button
-            class="bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600"
+            class="text-primary border-2 bg-white border-primary px-4 py-2 rounded-full hover:!bg-primary hover:!text-white"
           >
             Sign Up
           </button>
@@ -67,18 +107,19 @@
       <!-- Left Content -->
       <div class="md:w-1/2 mb-8 md:mb-0 space-y-8" data-aos="fade-right">
         <h1
-          class="lg:text-6xl md:text-5xl text-4xl font-bold leading-tight text-gray-900"
+          class="lg:text-5xl md:text-5xl text-4xl font-bold leading-tight !font-primary text-gray-900"
         >
-          Everything is<br class="lg:block hidden" />
-          easy with LaslesVPN.
+          Achieve musical <br class="lg:block hidden" />
+          mastery with Aurea App.
         </h1>
-        <p class="text-gray-600 text-lg leading-relaxed max-w-xl">
-          Enjoy complete online freedom with LaslesVPN — a secure, high-speed
-          network designed for all your digital needs.
+        <p class="text-gray-600 text-sm leading-relaxed max-w-xl">
+          Track your practice, hit your goals, and grow as a musician every day.
+          Turn every session into measurable progress and unlock your full
+          potential.
         </p>
         <div class="pt-4">
           <button
-            class="bg-red-500 text-white px-12 py-4 rounded-lg hover:bg-red-600 shadow-lg hover:shadow-xl transition duration-300 text-lg font-medium hover:-translate-y-1"
+            class="bg-primary text-white px-12 py-4 rounded-lg hover:bg-primary shadow-lg hover:shadow-xl transition duration-300 text-lg font-medium hover:-translate-y-1"
           >
             Get Started
           </button>
@@ -99,34 +140,54 @@
         >
           <!-- Users Stats -->
           <div class="flex items-center gap-6 px-12 py-6 md:py-0">
-            <div class="p-5 bg-red-100 rounded-full">
-              <img src="./images/user.png" alt="user" class="size-8" />
+            <div class="p-5 flex-shrink-0 rounded-full">
+              <img
+                src="./images/user.png"
+                alt="user"
+                class="w-12 h-12 flex-shrink-0"
+              />
             </div>
             <div>
-              <h3 class="text-3xl font-bold text-gray-900">90+</h3>
-              <p class="text-gray-600">Users</p>
+              <h3
+                class="text-3xl sm:text-3xl md:text-2xl lg:text-3xl font-bold text-gray-900"
+              >
+                1000+
+              </h3>
+              <p class="text-gray-600">Active Users</p>
             </div>
           </div>
 
           <!-- Locations Stats -->
           <div class="flex items-center gap-6 px-12 py-6 md:py-0">
-            <div class="p-5 bg-red-100 rounded-full">
-              <img src="./images/location.png" alt="location" class="size-8" />
+            <div class="p-5 flex-shrink-0 rounded-full">
+              <img src="./images/goals.png" alt="location" class="h-12 w-12" />
             </div>
             <div>
-              <h3 class="text-3xl font-bold text-gray-900">30+</h3>
-              <p class="text-gray-600">Locations</p>
+              <h3
+                class="text-3xl sm:text-3xl md:text-2xl lg:text-3xl font-bold text-gray-900"
+              >
+                50,000+
+              </h3>
+              <p class="text-gray-600">Goals Achieved</p>
             </div>
           </div>
 
           <!-- Servers Stats -->
           <div class="flex items-center gap-6 px-12 py-6 md:py-0">
-            <div class="p-5 bg-red-100 rounded-full">
-              <img src="./images/storage.png" alt="location" class="size-8" />
+            <div class="p-5 flex-shrink-0 rounded-full">
+              <img
+                src="./images/sessions.png"
+                alt="location"
+                class="w-12 h-12"
+              />
             </div>
             <div>
-              <h3 class="text-3xl font-bold text-gray-900">50+</h3>
-              <p class="text-gray-600">Servers</p>
+              <h3
+                class="text-3xl sm:text-3xl md:text-2xl lg:text-3xl font-bold text-gray-900"
+              >
+                100,000+
+              </h3>
+              <p class="text-gray-600">Sessions Logged</p>
             </div>
           </div>
         </div>
@@ -139,7 +200,7 @@
         <!-- Left Content (Illustration) -->
         <div class="md:w-1/2" data-aos="fade-right">
           <img
-            src="./images/features.png"
+            src="./images/features.webp"
             alt="Features illustration"
             class="w-full"
           />
@@ -148,20 +209,19 @@
         <!-- Right Content -->
         <div class="md:w-1/2 space-y-8" data-aos="fade-left">
           <h2 class="text-4xl font-bold text-gray-900 leading-tight">
-            Explore Powerful Features<br />Designed for You
+            Features designed for Your Growth
           </h2>
-          <p class="text-gray-600 leading-relaxed">
-            You can explore the features that we provide and
-            <br class="hidden sm:block" />
-            see the specifications.
+          <p class="text-gray-600 font-bold leading-relaxed">
+            You can track your practice, hit your goals, and see your progress
+            every day.
           </p>
 
           <!-- Features List -->
           <ul class="space-y-4">
             <li class="flex items-center gap-3">
-              <div class="p-1 rounded-full bg-green-100">
+              <div class="p-1 rounded-full bg-secondary">
                 <svg
-                  class="w-5 h-5 text-green-500"
+                  class="w-5 h-5 text-primary"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -174,12 +234,12 @@
                   ></path>
                 </svg>
               </div>
-              <span class="text-gray-600">Powerful online protection</span>
+              <span class="text-gray-600">Personalized Practice Plans</span>
             </li>
             <li class="flex items-center gap-3">
-              <div class="p-1 rounded-full bg-green-100">
+              <div class="p-1 rounded-full bg-secondary">
                 <svg
-                  class="w-5 h-5 text-green-500"
+                  class="w-5 h-5 text-primary"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -192,12 +252,12 @@
                   ></path>
                 </svg>
               </div>
-              <span class="text-gray-600">Internet without borders</span>
+              <span class="text-gray-600">Progress Tracking</span>
             </li>
             <li class="flex items-center gap-3">
-              <div class="p-1 rounded-full bg-green-100">
+              <div class="p-1 rounded-full bg-secondary">
                 <svg
-                  class="w-5 h-5 text-green-500"
+                  class="w-5 h-5 text-primary"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -210,12 +270,12 @@
                   ></path>
                 </svg>
               </div>
-              <span class="text-gray-600">Supercharged VPN</span>
+              <span class="text-gray-600">Goal Setting & Reminders</span>
             </li>
             <li class="flex items-center gap-3">
-              <div class="p-1 rounded-full bg-green-100">
+              <div class="p-1 rounded-full bg-secondary">
                 <svg
-                  class="w-5 h-5 text-green-500"
+                  class="w-5 h-5 text-primary"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -228,7 +288,7 @@
                   ></path>
                 </svg>
               </div>
-              <span class="text-gray-600">No specific time limits</span>
+              <span class="text-gray-600">Flexible Practice Sessions</span>
             </li>
           </ul>
         </div>
@@ -244,8 +304,8 @@
       <div class="text-center mb-16" data-aos="fade-up">
         <h2 class="text-4xl font-bold text-gray-900 mb-4">Choose Your Plan</h2>
         <p class="text-gray-600">
-          Choose the plan that best fits your needs and enjoy secure browsing
-          with peace of mind.
+          Pick the plan that best fits your musical journey and start improving
+          today.
         </p>
       </div>
 
@@ -253,7 +313,7 @@
       <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <!-- Free Plan -->
         <div
-          class="bg-white p-8 rounded-2xl border-2 border-gray-200 flex flex-col items-center hover:border-red-500 transition duration-300 hover:-translate-y-2"
+          class="bg-white p-8 rounded-2xl border-2 border-gray-200 flex flex-col items-center hover:border-primary transition duration-300 hover:-translate-y-2"
           data-aos="fade-up"
           data-aos-delay="100"
         >
@@ -276,7 +336,7 @@
                   d="M5 13l4 4L19 7"
                 ></path>
               </svg>
-              Unlimited Bandwidth
+              Personalized Practice Plans
             </li>
             <li class="flex items-center gap-2">
               <svg
@@ -292,7 +352,7 @@
                   d="M5 13l4 4L19 7"
                 ></path>
               </svg>
-              Encrypted Connection
+              Progress Tracking
             </li>
             <li class="flex items-center gap-2">
               <svg
@@ -308,7 +368,7 @@
                   d="M5 13l4 4L19 7"
                 ></path>
               </svg>
-              No Traffic Logs
+              Basic Goal Setting
             </li>
             <li class="flex items-center gap-2">
               <svg
@@ -331,7 +391,7 @@
           <!-- Price -->
           <div class="text-2xl font-bold mb-8">Free</div>
           <button
-            class="border-2 border-red-500 text-red-500 px-16 py-2 rounded-full hover:bg-red-500 hover:text-white transition duration-300"
+            class="border-2 border-primary text-primary px-16 py-2 rounded-full hover:bg-primary hover:text-white transition duration-300"
           >
             Select
           </button>
@@ -339,7 +399,7 @@
 
         <!-- Standard Plan -->
         <div
-          class="bg-white p-8 rounded-2xl border-2 border-gray-200 flex flex-col items-center hover:border-red-500 transition duration-300 hover:-translate-y-2"
+          class="bg-white p-8 rounded-2xl border-2 border-gray-200 flex flex-col items-center hover:border-primary transition duration-300 hover:-translate-y-2"
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -362,7 +422,7 @@
                   d="M5 13l4 4L19 7"
                 ></path>
               </svg>
-              Unlimited Bandwidth
+              Personalized Practice Plans
             </li>
             <li class="flex items-center gap-2">
               <svg
@@ -378,7 +438,7 @@
                   d="M5 13l4 4L19 7"
                 ></path>
               </svg>
-              Encrypted Connection
+              Progress Tracking
             </li>
             <li class="flex items-center gap-2">
               <svg
@@ -394,7 +454,7 @@
                   d="M5 13l4 4L19 7"
                 ></path>
               </svg>
-              Yes Traffic Logs
+              Advanced Goal Setting
             </li>
             <li class="flex items-center gap-2">
               <svg
@@ -410,7 +470,7 @@
                   d="M5 13l4 4L19 7"
                 ></path>
               </svg>
-              Works on All Devices
+              Practice Anywhere
             </li>
             <li class="flex items-center gap-2">
               <svg
@@ -426,7 +486,7 @@
                   d="M5 13l4 4L19 7"
                 ></path>
               </svg>
-              Connect Anywhere
+              Access to Extra Exercises
             </li>
           </ul>
 
@@ -435,7 +495,7 @@
             $9 <span class="text-gray-500 text-base font-normal">/ mo</span>
           </div>
           <button
-            class="border-2 border-red-500 text-red-500 px-16 py-2 rounded-full hover:bg-red-500 hover:text-white transition duration-300"
+            class="border-2 border-primary text-primary px-16 py-2 rounded-full hover:bg-primary hover:text-white transition duration-300"
           >
             Select
           </button>
@@ -443,7 +503,7 @@
 
         <!-- Premium Plan -->
         <div
-          class="bg-white p-8 rounded-2xl border-2 border-red-500 flex flex-col items-center hover:-translate-y-2 transition-all"
+          class="bg-white p-8 rounded-2xl border-2 border-primary flex flex-col items-center hover:-translate-y-2 transition-all"
           data-aos="fade-up"
           data-aos-delay="300"
         >
@@ -466,7 +526,7 @@
                   d="M5 13l4 4L19 7"
                 ></path>
               </svg>
-              Unlimited Bandwidth
+              Personalized Practice Plans
             </li>
             <li class="flex items-center gap-2">
               <svg
@@ -482,7 +542,7 @@
                   d="M5 13l4 4L19 7"
                 ></path>
               </svg>
-              Encrypted Connection
+              Progress Tracking
             </li>
             <li class="flex items-center gap-2">
               <svg
@@ -498,7 +558,7 @@
                   d="M5 13l4 4L19 7"
                 ></path>
               </svg>
-              Yes Traffic Logs
+              Advanced Goal Setting
             </li>
             <li class="flex items-center gap-2">
               <svg
@@ -514,7 +574,7 @@
                   d="M5 13l4 4L19 7"
                 ></path>
               </svg>
-              Works on All Devices
+              Access to Extra Exercises
             </li>
             <li class="flex items-center gap-2">
               <svg
@@ -530,7 +590,7 @@
                   d="M5 13l4 4L19 7"
                 ></path>
               </svg>
-              Connect Anywhere
+              Performance Analytics & Insights
             </li>
             <li class="flex items-center gap-2">
               <svg
@@ -555,63 +615,11 @@
             $12 <span class="text-gray-500 text-base font-normal">/ mo</span>
           </div>
           <button
-            class="bg-red-500 text-white px-16 py-2 rounded-full hover:bg-red-600 transition duration-300"
+            class="bg-primary text-white px-16 py-2 rounded-full hover:bg-primary transition duration-300"
           >
             Select
           </button>
         </div>
-      </div>
-    </section>
-
-    <!-- Global Network Section -->
-    <section class="max-w-[1440px] container mx-auto px-4 py-24" id="network">
-      <!-- Section Header -->
-      <div class="text-center mb-16" data-aos="fade-up">
-        <h2 class="text-4xl font-bold text-gray-900 mb-4">
-          Huge Global Network<br />
-          of Fast VPN
-        </h2>
-        <p class="text-gray-600 max-w-2xl mx-auto">
-          See <span class="font-medium">LaslesVPN</span> everywhere to make it
-          easier for you when you move locations.
-        </p>
-      </div>
-
-      <!-- World Map -->
-      <div class="mb-16" data-aos="zoom-in">
-        <img src="./images/map.png" alt="Global Network Map" class="w-full" />
-      </div>
-
-      <!-- Sponsored Logos -->
-      <div
-        class="flex flex-wrap justify-center items-center gap-12 opacity-75"
-        data-aos="fade-up"
-      >
-        <img
-          src="./images/netflix.png"
-          alt="Netflix"
-          class="h-12 grayscale hover:grayscale-0 transition duration-300"
-        />
-        <img
-          src="./images/reddit.png"
-          alt="Reddit"
-          class="h-12 grayscale hover:grayscale-0 transition duration-300"
-        />
-        <img
-          src="./images/amazon.png"
-          alt="Amazon"
-          class="h-12 grayscale hover:grayscale-0 transition duration-300"
-        />
-        <img
-          src="./images/discord.png"
-          alt="Discord"
-          class="h-12 grayscale hover:grayscale-0 transition duration-300"
-        />
-        <img
-          src="./images/spotify.png"
-          alt="Spotify"
-          class="h-12 grayscale hover:grayscale-0 transition duration-300"
-        />
       </div>
     </section>
 
@@ -623,12 +631,12 @@
       <!-- Section Header -->
       <div class="text-center mb-16">
         <h2 class="text-4xl font-bold text-[#0B132A] mb-5">
-          Trusted by Thousands of<br />
-          Happy Customers
+          Trusted by Thousands of <br />
+          Professional Musicians
         </h2>
         <p class="text-[#4F5665] max-w-2xl mx-auto">
-          Discover why thousands of customers choose LaslesVPN for privacy,
-          speed, and security.
+          See why thousands of music students and hobbyists choose Aurea App to
+          track, improve, and master their skills.
         </p>
       </div>
 
@@ -646,7 +654,7 @@
           <!-- Navigation Arrows -->
           <div class="flex sm:!flex lg:!flex xl:!flex gap-4">
             <div
-              class="swiper-button-prev !static !w-[60px] !h-[60px] flex items-center justify-center rounded-full border-2 border-[#F53855] text-[#F53855] hover:bg-red-200 hover:text-white transition-all after:!content-['']"
+              class="swiper-button-prev !static !w-[60px] !h-[60px] flex items-center justify-center rounded-full border-2 border-primary text-primary hover:bg-secondary hover:text-white transition-all after:!content-['']"
             >
               <img
                 src="./images/arrow-left.png"
@@ -655,7 +663,7 @@
               />
             </div>
             <div
-              class="swiper-button-next !static !w-[60px] !h-[60px] flex items-center justify-center rounded-full bg-[#F53855] text-white hover:opacity-90 transition-all after:!content-['']"
+              class="swiper-button-next !static !w-[60px] !h-[60px] flex items-center justify-center rounded-full bg-primary text-white hover:opacity-90 transition-all after:!content-['']"
             >
               <img
                 src="./images/arrow-right.png"
@@ -686,15 +694,16 @@
               Get Special Features!
             </h2>
             <p class="text-[#4F5665]">
-              Subscribe today and enjoy fast, secure, and private browsing
-              everywhere.
+              Subscribe today and get personalized practice tracking, progress
+              insights, and motivational features to reach your musical goals
+              faster.
             </p>
           </div>
 
           <!-- Right Content -->
           <div>
             <button
-              class="bg-[#F53855] text-white lg:px-16 lg:py-4 md:px-12 md:py-3 px-8 py-2 rounded-xl hover:opacity-90 transition-all duration-300 shadow-xl hover:shadow-2xl"
+              class="bg-primary text-white lg:px-16 lg:py-4 md:px-12 md:py-3 px-8 py-2 rounded-xl hover:opacity-90 transition-all duration-300 shadow-xl hover:shadow-2xl"
             >
               Subscribe Now
             </button>
@@ -710,17 +719,18 @@
           <!-- Brand Column -->
           <div class="lg:col-span-1">
             <div class="flex items-center gap-2 mb-5">
-              <img src="./images/logo.png" alt="LaslesVPN" class="h-8" />
-              <span class="text-xl font-bold">LaslesVPN</span>
+              <img src="./images/logo.webp" alt="LaslesVPN" class="h-12" />
+              <span class="text-xl font-bold">AureaApp</span>
             </div>
             <p class="text-[#4F5665] mb-8">
-              LaslesVPN is a private virtual network that has unique features
-              with high security.
+              Aurea App is a personalized music practice app that helps you
+              track your progress, improve skills, and reach your musical goals
+              efficiently.
             </p>
             <div class="flex gap-4">
               <a
                 href="#"
-                class="p-2 rounded-full bg-red-500 shadow-md hover:shadow-lg transition-all hover:-translate-y-1 duration-300"
+                class="p-2 rounded-full bg-primary shadow-md hover:shadow-lg transition-all hover:-translate-y-1 duration-300"
               >
                 <img
                   src="./images/facebook.png"
@@ -730,13 +740,13 @@
               </a>
               <a
                 href="#"
-                class="p-2 rounded-full bg-red-500 shadow-md hover:shadow-lg transition-all hover:-translate-y-1 duration-300"
+                class="p-2 rounded-full bg-primary shadow-md hover:shadow-lg transition-all hover:-translate-y-1 duration-300"
               >
                 <img src="./images/twitter.png" alt="Twitter" class="w-4 h-4" />
               </a>
               <a
                 href="#"
-                class="p-2 rounded-full bg-red-500 shadow-md hover:shadow-lg transition-all hover:-translate-y-1 duration-300"
+                class="p-2 rounded-full bg-primary shadow-md hover:shadow-lg transition-all hover:-translate-y-1 duration-300"
               >
                 <img
                   src="./images/instagram.png"
@@ -745,19 +755,19 @@
                 />
               </a>
             </div>
-            <p class="text-[#AFB5C0] mt-8">©2020LaslesVPN</p>
+            <p class="text-[#AFB5C0] mt-8">©2025AureaAPP</p>
           </div>
 
           <!-- Product Column -->
           <div>
             <h3 class="font-medium text-lg mb-6">Product</h3>
             <ul class="space-y-4 text-[#4F5665]">
-              <li><a href="#" class="hover:text-[#F53855]">Download</a></li>
-              <li><a href="#" class="hover:text-[#F53855]">Pricing</a></li>
-              <li><a href="#" class="hover:text-[#F53855]">Locations</a></li>
-              <li><a href="#" class="hover:text-[#F53855]">Server</a></li>
-              <li><a href="#" class="hover:text-[#F53855]">Countries</a></li>
-              <li><a href="#" class="hover:text-[#F53855]">Blog</a></li>
+              <li><a href="#" class="hover:text-primary">Download</a></li>
+              <li><a href="#" class="hover:text-primary">Pricing</a></li>
+              <li><a href="#" class="hover:text-primary">Features</a></li>
+              <li><a href="#" class="hover:text-primary">Testimonials</a></li>
+              <li><a href="#" class="hover:text-primary">Countries</a></li>
+              <li><a href="#" class="hover:text-primary">Blog</a></li>
             </ul>
           </div>
 
@@ -765,15 +775,15 @@
           <div>
             <h3 class="font-medium text-lg mb-6">Engage</h3>
             <ul class="space-y-4 text-[#4F5665]">
-              <li><a href="#" class="hover:text-[#F53855]">LaslesVPN</a></li>
-              <li><a href="#" class="hover:text-[#F53855]">FAQ</a></li>
-              <li><a href="#" class="hover:text-[#F53855]">Tutorials</a></li>
-              <li><a href="#" class="hover:text-[#F53855]">About Us</a></li>
+              <li><a href="#" class="hover:text-primary">AureaAPP</a></li>
+              <li><a href="#" class="hover:text-primary">FAQ</a></li>
+              <li><a href="#" class="hover:text-primary">Tutorials</a></li>
+              <li><a href="#" class="hover:text-primary">About Us</a></li>
               <li>
-                <a href="#" class="hover:text-[#F53855]">Privacy Policy</a>
+                <a href="#" class="hover:text-primary">Privacy Policy</a>
               </li>
               <li>
-                <a href="#" class="hover:text-[#F53855]">Terms of Service</a>
+                <a href="#" class="hover:text-primary">Terms of Service</a>
               </li>
             </ul>
           </div>
@@ -782,9 +792,9 @@
           <div>
             <h3 class="font-medium text-lg mb-6">Earn Money</h3>
             <ul class="space-y-4 text-[#4F5665]">
-              <li><a href="#" class="hover:text-[#F53855]">Affiliate</a></li>
+              <li><a href="#" class="hover:text-primary">Affiliate</a></li>
               <li>
-                <a href="#" class="hover:text-[#F53855]">Become Partner</a>
+                <a href="#" class="hover:text-primary">Become Partner</a>
               </li>
             </ul>
           </div>
